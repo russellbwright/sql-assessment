@@ -16,13 +16,13 @@ module.exports = {
 
         req.app.get('db').add_user([req.body.name, req.body.email])
         .then(response => res.json(response))
-        .catch(err => console.log(err))
+        
     },
 
     addVehicle: (req, res, next) => {
-        req.app.get('db').add_vehicle([req.body.make, req.body.model, req.body.year])
+        req.app.get('db').add_vehicle([req.body.make, req.body.model, req.body.year, req.body.owner_id])
         .then(response => res.json(response))
-        .catch(err => console.log(err))
+        
     },
 
     userVehicleCount: (req,res,next) => {
