@@ -17,7 +17,7 @@ massive({
   port: 5432,
   database: 'assessbox',
   user: 'postgres',
-  password: 'minerals'
+  password: ''
 }).then( db => {
   app.set('db', db);
 
